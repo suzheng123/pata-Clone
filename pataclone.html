@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pata Clone</title>
+	<script type="text/javascript" src="paper-full.js"></script>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.14/howler.core.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="pataclone.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+	var keyPressed = {
+			1: {
+				sound: new Howl({
+		  		src: ['sounds/B/bubbles.mp3']
+				}),
+				color: '#c8f442'
+			},
+			2: {
+				sound: new Howl({
+		  		src: ['sounds/B/clay.mp3']
+				}),
+				color: '#2ecc71'
+			},
+			3: {
+				sound: new Howl({
+		  		src: ['sounds/B/confetti.mp3']
+				}),
+				color: '#4441f4'
+		    },
+		    4: {
+		    	sound: new Howl({
+		  		src: ['sounds/B/c3.mp3']
+				}),
+				color: '#dd2e4b'
+			},
+			5: {
+		    	sound: new Howl({
+		  		src: ['sounds/B/f2.mp3']
+				}),
+				color: '#84ffee'
+			},
+			6: {
+		    	sound: new Howl({
+		  		src: ['sounds/B/p2.mp3']
+				}),
+				color: '#f4722c'
+			},
+			7: {
+		    	sound: new Howl({
+		  		src: ['sounds/B/q1.mp3']
+				}),
+				color: '#a32bf4c'
+			},
+			8: {
+		    	sound: new Howl({
+		  		src: ['sounds/B/glimmer.mp3']
+				}),
+				color: '#a32790'
+			},
+			9: {
+		    	sound: new Howl({
+		  		src: ['sounds/B/s3.mp3']
+				}),
+				color: '#1d20d1'
+			},
+			0: {
+		    	sound: new Howl({
+		  		src: ['sounds/B/moon.mp3']
+				}),
+				color: '#dd760f'
+			},
+			q: {
+				sound: new Howl({
+		  		src: ['sounds/B/bubbles.mp3']
+				}),
+				color: '#1abc9c'
+			},
+			w: {
+				sound: new Howl({
+		  		src: ['sounds/B/clay.mp3']
+				}),
+				color: '#2ecc71'
+			},
+			e: {
+				sound: new Howl({
+		  		src: ['sounds/B/confetti.mp3']
+				}),
+				color: '#3498db'
+			},
+			r: {
+				sound: new Howl({
+		  		src: ['sounds/B/corona.mp3']
+				}),
+				color: '#9b59b6'
+			},
+				t: {
+				sound: new Howl({
+		  		src: ['sounds/B/dotted-spiral.mp3']
+				}),
+				color: '#34495e'
+			},
+			y: {
+				sound: new Howl({
+		  		src: ['sounds/B/flash-1.mp3']
+				}),
+				color: '#16a085'
+			},
+			u: {
+				sound: new Howl({
+		  		src: ['sounds/B/flash-2.mp3']
+				}),
+				color: '#27ae60'
+			},
+			i: {
+				sound: new Howl({
+		  		src: ['sounds/B/flash-3.mp3']
+				}),
+				color: '#2980b9'
+			},
+			o: {
+				sound: new Howl({
+				src: ['sounds/B/glimmer.mp3']
+				}),
+				color: '#8e44ad'
+			},
+			p: {
+				sound: new Howl({
+		  		src: ['sounds/B/moon.mp3']
+				}),
+				color: '#2c3e50'
+			},
+			a: {
+				sound: new Howl({
+		  		src: ['sounds/B/pinwheel.mp3']
+				}),
+				color: '#f1c40f'
+			},
+			s: {
+				sound: new Howl({
+		  		src: ['sounds/B/piston-1.mp3']
+				}),
+				color: '#e67e22'
+			},
+				d: {
+				sound: new Howl({
+		  		src: ['sounds/B/piston-2.mp3']
+				}),
+				color: '#e74c3c'
+			},
+			f: {
+				sound: new Howl({
+		  		src: ['sounds/B/prism-1.mp3']
+				}),
+				color: '#95a5a6'
+			},
+			g: {
+				sound: new Howl({
+		  		src: ['sounds/B/prism-2.mp3']
+				}),
+				color: '#f39c12'
+			},
+			h: {
+				sound: new Howl({
+		  		src: ['sounds/B/prism-3.mp3']
+				}),
+				color: '#d35400'
+			},
+			j: {
+				sound: new Howl({
+		  		src: ['sounds/B/splits.mp3']
+				}),
+				color: '#1abc9c'
+			},
+			k: {
+				sound: new Howl({
+		  		src: ['sounds/B/squiggle.mp3']
+				}),
+				color: '#2ecc71'
+			},
+			l: {
+				sound: new Howl({
+		  		src: ['sounds/B/strike.mp3']
+				}),
+				color: '#3498db'
+			},
+			z: {
+				sound: new Howl({
+		  		src: ['sounds/B/suspension.mp3']
+				}),
+				color: '#9b59b6'
+			},
+			x: {
+				sound: new Howl({
+		  		src: ['sounds/B/timer.mp3']
+				}),
+				color: '#34495e'
+			},
+			c: {
+				sound: new Howl({
+		  		src: ['sounds/B/ufo.mp3']
+				}),
+				color: '#16a085'
+			},
+			v: {
+				sound: new Howl({
+		  		src: ['sounds/B/veil.mp3']
+				}),
+				color: '#27ae60'
+			},
+			b: {
+				sound: new Howl({
+		  		src: ['sounds/B/wipe.mp3']
+				}),
+				color: '#2980b9'
+			},
+			n: {
+				sound: new Howl({
+				src: ['sounds/B/zig-zag.mp3']
+				}),
+				color: '#8e44ad'
+			},
+			m: {
+				sound: new Howl({
+		  		src: ['sounds/B/moon.mp3']
+				}),
+				color: '#2c3e50'
+			}
+		}
+
+	
+	var figures = [];
+
+	function onKeyDown(event) {
+		var randomEdge = Math.floor(Math.random() * 12) + 3;
+		var randomSize = Math.floor(Math.random() * 300) + 100;
+		if(keyPressed[event.key]){
+			var maxPoint = new Point(view.size.width, view.size.height);
+			var randomPoint = Point.random();
+			var point = maxPoint * randomPoint;
+			var newFigure = new Path.RegularPolygon(point,randomEdge, randomSize)
+			newFigure.fillColor = keyPressed[event.key].color;
+			keyPressed[event.key].sound.play();
+			figures.push(newFigure);
+	}					
+	}
+
+		function onFrame(event){
+			for(var i = 0; i < figures.length; i++){
+				figures[i].fillColor.hue += 1;
+				figures[i].scale(.95);
+			}
+		}
+
+	
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+
+<script type="text/javascript" src="pataclone.js"></script>
+</body>
+</html>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
